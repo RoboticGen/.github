@@ -1,53 +1,57 @@
-name: 🐛 Bug Report
-description: File a bug report to help us improve
-title: "[BUG] <short description>"
-labels: [bug]
-assignees: []
-
+name: Bug Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - octocat
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting a bug! Please fill out the form below.
-  
+        Thanks for taking the time to fill out this bug report!
   - type: input
-    id: environment
+    id: contact
     attributes:
-      label: Environment
-      description: What hardware, OS, or version are you using?
-      placeholder: "e.g. Windows 11, MicroPython 1.20, ESP32"
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
     validations:
       required: true
-
-  - type: textarea
-    id: description
+  - type: dropdown
+    id: version
     attributes:
-      label: Description
-      description: Describe the bug clearly and concisely.
+      label: Version
+      description: What version of our software are you running?
+      options:
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
+      default: 0
     validations:
       required: true
-
-  - type: textarea
-    id: steps
+  - type: dropdown
+    id: browsers
     attributes:
-      label: Steps to Reproduce
-      description: How do we reproduce the issue?
-      placeholder: |
-        1. Go to '...'
-        2. Run command '...'
-        3. See error message
-    validations:
-      required: true
-
-  - type: textarea
-    id: expected
-    attributes:
-      label: Expected Behavior
-      description: What should happen instead?
-
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
   - type: textarea
     id: logs
     attributes:
-      label: Logs or Screenshots
-      description: Attach logs, error messages, or screenshots if available.
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
 
