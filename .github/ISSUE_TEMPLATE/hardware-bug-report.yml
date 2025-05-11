@@ -1,0 +1,54 @@
+name: Hardware Bug Report
+description: Report an issue with Obo kits, sensors, motors, MicroPython firmware, or other hardware components.
+title: "[HW BUG] <short description>"
+labels: [bug, hardware]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the issue you are facing with the hardware. Include as much detail as possible.
+
+  - type: input
+    id: kit-version
+    attributes:
+      label: Hardware Kit / Board Version
+      placeholder: "e.g. Obo Car v2.1, Obo Play v1.0"
+
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware Version / MicroPython Version
+      placeholder: "e.g. MicroPython 1.20, custom.hex v3"
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: Issue Description
+      description: What is malfunctioning or behaving incorrectly?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Power on the kit
+        2. Run 'main.py'
+        3. Motor spins unexpectedly
+    validations:
+      required: true
+
+  - type: textarea
+    id: troubleshooting
+    attributes:
+      label: Troubleshooting Attempts
+      description: What have you already tried?
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Photos, Schematics, Logs
+      description: Attach images or serial output logs if available.

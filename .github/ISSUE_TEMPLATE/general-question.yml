@@ -1,0 +1,20 @@
+name: General Question
+description: Ask a question about using or contributing to a RoboticGen repo
+title: "[QUESTION] <short description>"
+labels: [question]
+assignees: []
+
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: Be clear and specific so we can help you effectively.
+    validations:
+      required: true
+
+  - type: input
+    id: repo
+    attributes:
+      label: Related Repository
+      placeholder: "e.g. obo-car-sdk"

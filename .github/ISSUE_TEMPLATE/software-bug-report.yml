@@ -1,0 +1,57 @@
+name: Software Bug Report
+description: Report a bug related to a RoboticGen software component (SDK, IDE, website, other)
+title: "[BUG] <short description>"
+labels: [bug, software]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve our software. Please complete the form below for faster resolution.
+
+  - type: input
+    id: component
+    attributes:
+      label: Affected Repository / Component / Module
+      placeholder: "e.g. obo-play-sdk, obo-code-web"
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, browser, Python/Node version, etc.
+      placeholder: "e.g. Windows 11, Chrome 123, Python 3.10"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: Clearly describe what the bug is.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Go to '...'
+        2. Run '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should have happened?
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, Errors, or Screenshots
+      description: Paste logs or upload screenshots.
