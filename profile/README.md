@@ -78,6 +78,10 @@ Web-based IDE for programming MicroPython without installation.
 ![Contributors](https://img.shields.io/github/contributors/RoboticGen/obo-code-web?style=social)
 ---
 
+### [Software Interview Tasks](https://github.com/RoboticGen/Software-Team-Intern-Questions)
+- This Repository contains the interview tasks given in the interviews for the Software Team of RoboticGen
+
+
 ## What We Do
 
 - **STEM Education** – Robotics, AI, and Programming for 
